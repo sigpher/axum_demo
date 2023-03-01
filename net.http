@@ -1,0 +1,22 @@
+@user=choi
+@url=http://127.0.0.1:8080
+
+
+### root
+GET {{url}} HTTP/1.1
+
+
+### create_user
+POST {{url}}/users HTTP/1.1
+Content-Type:application/json
+
+{
+    "id":2,
+    "username":"choi",
+    "email":"caiwy@tdyh.com.cn",
+    "dept":"QA",
+    "password":"131233"
+}
+
+### 404 handler
+GET {{url}}/nopage HTTP/1.1
